@@ -7,16 +7,16 @@ RUN yum -y install fontconfig unzip docker-client git && \
 	mkdir -p /usr/local/maven && \
 	mkdir -p /usr/local/node
 
-#ADD https://download.beyondspider.com/docker/jenkins-2.176.1.war $CATALINA_HOME/webapps/jenkins.war
-#ADD https://download.beyondspider.com/docker/apache-maven-3.6.1-bin.tar.gz /tmp/apache-maven-3.6.1-bin.tar.gz
-#ADD https://download.beyondspider.com/docker/gradle-5.4.1-bin.zip /tmp/gradle-5.4.1-bin.zip
-#ADD https://download.beyondspider.com/docker/node-v10.16.0-linux-x64.tar.xz /tmp/node-v10.16.0-linux-x64.tar.xz
-#ADD https://download.beyondspider.com/docker/jenkins_home.tar.gz /usr/share/jenkins/jenkins_home.tar.gz
-ADD http://localhost:10180/download/jenkins-2.176.1.war $CATALINA_HOME/webapps/jenkins.war
-ADD http://localhost:10180/download/apache-maven-3.6.1-bin.tar.gz /tmp/apache-maven-3.6.1-bin.tar.gz
-ADD http://localhost:10180/download/gradle-5.4.1-bin.zip /tmp/gradle-5.4.1-bin.zip
-ADD http://localhost:10180/download/node-v10.16.0-linux-x64.tar.xz /tmp/node-v10.16.0-linux-x64.tar.xz
-ADD http://localhost:10180/download/jenkins_home.tar.gz /usr/share/jenkins/jenkins_home.tar.gz
+ADD https://download.beyondspider.com/docker/jenkins-2.176.1.war $CATALINA_HOME/webapps/jenkins.war
+ADD https://download.beyondspider.com/docker/apache-maven-3.6.1-bin.tar.gz /tmp/apache-maven-3.6.1-bin.tar.gz
+ADD https://download.beyondspider.com/docker/gradle-5.4.1-bin.zip /tmp/gradle-5.4.1-bin.zip
+ADD https://download.beyondspider.com/docker/node-v10.16.0-linux-x64.tar.xz /tmp/node-v10.16.0-linux-x64.tar.xz
+ADD https://download.beyondspider.com/docker/jenkins_home.tar.gz /usr/share/jenkins/jenkins_home.tar.gz
+# ADD http://localhost:10180/download/jenkins-2.176.1.war $CATALINA_HOME/webapps/jenkins.war
+# ADD http://localhost:10180/download/apache-maven-3.6.1-bin.tar.gz /tmp/apache-maven-3.6.1-bin.tar.gz
+# ADD http://localhost:10180/download/gradle-5.4.1-bin.zip /tmp/gradle-5.4.1-bin.zip
+# ADD http://localhost:10180/download/node-v10.16.0-linux-x64.tar.xz /tmp/node-v10.16.0-linux-x64.tar.xz
+# ADD http://localhost:10180/download/jenkins_home.tar.gz /usr/share/jenkins/jenkins_home.tar.gz
 
 RUN tar -xzvf /tmp/apache-maven-3.6.1-bin.tar.gz -C /usr/local/maven && \
 	unzip /tmp/gradle-5.4.1-bin.zip -d /usr/local/gradle && \

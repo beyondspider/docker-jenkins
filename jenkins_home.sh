@@ -9,9 +9,9 @@ echo "========================================================================"
 
 echo "=> Init home"
 
-tar -xzf /usr/share/jenkins/jenkins_home.tar.gz --strip-components 1 -C $JENKINS_HOME
+tar -xzf /tmp/jenkins_home.tar.gz --strip-components 1 -C $JENKINS_HOME
 
-rm -rf /usr/share/jenkins/jenkins_home.tar.gz
+rm -rf /tmp/jenkins_home.tar.gz
 
 touch $JENKINS_HOME/.jenkins_home_created
 

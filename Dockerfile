@@ -5,9 +5,8 @@ RUN yum -y install fontconfig unzip docker-client git && \
 	yum clean all && \
 	mkdir -p /usr/local/gradle && \
 	mkdir -p /usr/local/maven && \
-	mkdir -p /usr/local/node
-
-RUN curl -o $CATALINA_HOME/webapps/jenkins.war https://download.beyondspider.com/docker/jenkins-2.176.1.war && \ 
+	mkdir -p /usr/local/node && \
+	curl -o $CATALINA_HOME/webapps/jenkins.war https://download.beyondspider.com/docker/jenkins-2.176.1.war && \ 
 	curl -o /tmp/apache-maven-3.6.1-bin.tar.gz https://download.beyondspider.com/docker/apache-maven-3.6.1-bin.tar.gz && \ 
 	curl -o /tmp/gradle-5.4.1-bin.zip https://download.beyondspider.com/docker/gradle-5.4.1-bin.zip && \ 
 	curl -o /tmp/node-v10.16.0-linux-x64.tar.xz https://download.beyondspider.com/docker/node-v10.16.0-linux-x64.tar.xz && \

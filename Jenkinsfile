@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('build') {
       steps {
-        sh './build.sh'
+        sh 'docker build -t beyondspider/jenkins:latest .'
       }
     }
   }
